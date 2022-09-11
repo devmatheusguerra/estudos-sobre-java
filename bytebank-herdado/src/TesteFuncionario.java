@@ -1,7 +1,9 @@
 public class TesteFuncionario {
     public static void main(String[] args){
-        Funcionario func = new Funcionario("Matheus Guerra", "12345678910", 3000.0);
-        System.out.println(func.getSalario());
-        System.out.println(func.getBonificacao());
+        Designer d = new Designer("Joao", "123", 2000.0);
+        FuncionarioAutenticavel gerente = new Gerente("CJ", "23455238197",2000, 1243);
+        SistemaInterno si = new SistemaInterno();
+        System.out.println(si.autentica(gerente));
+
     }
 }
