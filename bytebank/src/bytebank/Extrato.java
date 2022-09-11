@@ -1,6 +1,7 @@
 package bytebank;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.Locale;
 
 
@@ -22,10 +23,8 @@ public class Extrato {
 	}
 	
 	public String getDataEHoraFormatada() {
-		Locale brasil = new Locale(""); 
-		DateTimeFormatter dtf = new DateTimeFormatter();
-		this.dataEHora.format();
-		
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+		return dtf.format(this.dataEHora);
 	}
 
 

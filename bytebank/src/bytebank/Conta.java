@@ -39,7 +39,7 @@ public class Conta {
 			System.out.println("----------------------------------------------------");
 			Extrato extrato = this.extratos.get(i);
 			System.out.println(extrato.getTransacao());
-			System.out.println(extrato.getDataEHora() + " => R$ " + extrato.getValor());
+			System.out.println(extrato.getDataEHoraFormatada() + " => R$ " + extrato.getValor());
 			System.out.println("----------------------------------------------------");
 		}
 		

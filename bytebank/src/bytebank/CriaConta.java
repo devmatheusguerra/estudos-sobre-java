@@ -1,5 +1,6 @@
 package bytebank;
 
+import java.lang.Thread;
 public class CriaConta {
 	public static void main (String[] args) {
 		
@@ -10,7 +11,22 @@ public class CriaConta {
 		Conta conta2 = new Conta(2331, 29042, cliente2);
 		
 		conta1.deposita(1000);
+
+
+		try{
+			Thread.sleep(3000);
+		}catch(InterruptedException e){
+			System.out.println(e);
+		}
+
 		conta1.saca(100);
+
+		try{
+			Thread.sleep(2000);
+		}catch(InterruptedException e){
+			System.out.println(e);
+		}
+
 		conta1.transfere(conta2, 200);
 		
 		conta2.saca(100);
